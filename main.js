@@ -10,3 +10,20 @@ const natalia = {
   },
 };
 
+function Student(name, age, cursosAprobados) {
+  this.name = name;
+  this.age = age;
+  this.cursosAprobados = cursosAprobados;
+  /* this.aprobarCurso = function (nuevoCurso){
+    this.cursosAprobados.push(nuevoCurso);
+  } */
+}
+
+Student.prototype.aprobarCurso = function (nuevoCursoAvanzado) {
+  this.cursosAprobados.push(nuevoCursoAvanzado);
+};
+
+const alumno1 = new Student("Paulo Galarza", 31, [
+  "Curso de POO",
+  "Curso de Diseño",
+]);
